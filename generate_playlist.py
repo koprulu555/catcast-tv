@@ -80,7 +80,9 @@ class CatCastM3UGenerator:
     
     def generate_playlist(self):
         """Tüm sayfaları çekip M3U playlist oluşturur"""
-        pages = list(range(1, 24)) + [480, 481]  # 1-23 + 480, 481
+        # SAYFA SAYISI 23'ten 50'ye ÇIKARILDI - 480 ve 481 KORUNDU
+        pages = list(range(1, 51)) + [480, 481]  # 1-50 + 480, 481
+        
         all_m3u_content = "#EXTM3U\n"
         
         total_channels = 0
